@@ -1,3 +1,10 @@
+// Send the supervisor's email and password for authentication
+const submitCredentials = () => {
+  const emailAddress = document.getElementById("emailField");
+  const password = document.getElementById("passwordField");
+  const submitButton = document.getElementById("submitCredentialsButton");
+};
+
 // Get list of incoming orders
 // TODO: determine how multiple orders from users are handled
 const fetchIncomingOrders = () => {
