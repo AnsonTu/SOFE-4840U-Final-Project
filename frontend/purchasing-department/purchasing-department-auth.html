@@ -15,18 +15,19 @@
     <h2>Purchasing Department Authentication</h2>
     <div style="padding: 4px">
       Email:
-      <input id="emailField" />
+      <input id="emailField" type="email" />
     </div>
     <div style="padding: 4px">
       Pass:
-      <input id="passwordField" />
+      <input id="passwordField" type="password" />
     </div>
     <button
       id="submitCredentialsBtn"
-      style="margin-top: 8px; padding: 10px 20px"
+      style="margin: 8px 0; padding: 10px 20px"
       onclick="submitCredentials()"
     >
       Submit
     </button>
+    <div id="statusText"></div>
   </body>
 </html>
