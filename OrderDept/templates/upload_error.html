@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>File Error</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body style="background-color: #FBFBFB;" class="text-primary">
+  <section class="mb-1">
+    <div class="card">
+      <div class="card-header py-5">
+        <h1 class="mb-0 text-center"><strong>FILE ERROR</strong></h1>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container pt-4">
+      <!-- Section:  -->
+      <section>
+        <!-- Section: Row -->
+        <div class="row">
+          <section class="mb-2">
+            <div class="card">
+              <div class="card-header py-3">
+                <h5 class="mb-0 text-center"><strong>Order Status Confirmation </strong></h5>
+              </div>
+              <form action="{{url_for('auth_po_contents')}}" method='GET'>
+                <div class="card-body">
+                  <div class="container pt-3" style="text-align: center;">
+                    <p>Error uploading the file! Please try uploading again.</p>
+                  </div>
+                </div>
+              </form>
+          </section>
+        </div>
+        <!-- Button -->
+        <div class="col-md-12 text-center mt-4">
+          <!--Button and Total Amount-->
+          <div style="text-align: center;">
+            <input type="submit" name="Return" value="Return" class="btn btn-primary btn-lg">
+          </div>
+      </section>
+    </div>
+  </main>
+  </div>
+  </form>
+</body>
+
+</html>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+

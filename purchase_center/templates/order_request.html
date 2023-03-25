@@ -1,0 +1,131 @@
+<html>
+
+<head>
+  <title>Order Request</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body style="background-color: #FBFBFB;" class="text-primary">
+  <form action="{{ url_for('order_request') }}" method="post">
+    <section class="mb-1">
+      <div class="card">
+        <div class="card-header py-5">
+          <h1 class="mb-0 text-center"><strong>Purchase Order</strong></h1>
+        </div>
+      </div>
+    </section>
+
+    <!--Main layout-->
+    <main>
+      <div class="container pt-4">
+        <!-- Section-->
+        <section class="mb-1">
+          <div class="card">
+            <div class="card-header py-3">
+              <h5 class="mb-0 text-center"><strong>Verify your Order</strong></h5>
+            </div>
+          </div>
+        </section>
+        <!-- Section:  -->
+        <section>
+          <!-- Section: Row -->
+          <div class="row mt-3">
+            <section>
+              <table class="table table-hover" style="text-align: center; align-self: center;">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Printer</td>
+                    <td>$85</td>
+                    <td>{{printerq}}<br></td>
+                    <td>${{printert}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Tape (6 rolls)</td>
+                    <td>$10</td>
+                    <td>{{tape_6rollsq}}<br></td>
+                    <td>${{tape_6rollst}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Laser Toner Cart</td>
+                    <td>$80</td>
+                    <td>{{laser_toner_cartq}}<br></td>
+                    <td>${{laser_toner_cartt}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Office Chair</td>
+                    <td>$300</td>
+                    <td>{{office_chairq}}<br></td>
+                    <td>${{office_chairt}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Tablet</td>
+                    <td>$500</td>
+                    <td>{{tabletq}}<br></td>
+                    <td>${{tablett}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Laptop</td>
+                    <td>$1000</td>
+                    <td>{{laptopq}}<br></td>
+                    <td>${{laptopt}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Thumbdrive</td>
+                    <td>$15</td>
+                    <td>{{thumbdrive64q}}<br></td>
+                    <td>${{thumbdrive64t}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Desk Fan</td>
+                    <td>$20</td>
+                    <td>{{deskfanq}}<br></td>
+                    <td>${{deskfant}}<br></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>USB Hub</td>
+                    <td>$25</td>
+                    <td>{{usbhubq}}<br></td>
+                    <td>${{usbhubt}}<br></td>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </section>​
+      </div>
+    </main>
+
+    <!--Button and Total Amount-->
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h3 style="text-align: center;"> Total Amount = ${{amount}}</h3><br>
+      <input class="btn btn-primary" name="Back" type="submit" value="Back">
+      <input class="btn btn-primary" style="margin-left: 50px;" name="Confirm" type="submit" value="Confirm">
+    </div>
+  </form>
+</body>
+
+</html>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
