@@ -1,18 +1,16 @@
 from flask import Flask, request, render_template, redirect, url_for
-import MySQLdb
 import sys
-sys.path.insert(0, "/home/musselman/Downloads/SecProj/Database")
+sys.path.insert(0, "/home/musselman/Downloads/SOFE-4840U-Final-Project-main/Database")
 sys.path.insert(0, "/home/musselman/Downloads/SecProj")
 import os
 from Credentials import *
 from email_handler import send_confirmation_email
 from db_handler import *
 import rsa
+import MySQLdb
 from flask_wtf import Form
 from werkzeug.utils import secure_filename
 from wtforms import StringField
-from handle_db import *
-from handle_email import *
 
 LOC_OF_UPLOAD = '/home/musselman/Downloads'
 EXTEN = set(['txt'])

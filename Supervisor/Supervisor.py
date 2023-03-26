@@ -1,17 +1,16 @@
 from flask import Flask, request, render_template, redirect, url_for
-import MySQLdb
 import os
-import rsa
-import cPickle as pickle
+import hashlib
 import sys
-sys.path.insert(0, "/home/musselman/Downloads/SecProj/Database")
-sys.path.insert(0, "/home/musselman/Downloads/SecProj")
+sys.path.insert(0, "/home/musselman/Downloads/SOFE-4840U-Final-Project-main/Database")
+sys.path.insert(0, "/home/musselman/Downloads/SOFE-4840U-Final-Project-main")
 from email_handler import send_email_to_orderdept
 from Credentials import *
 from db_handler import *
+import MySQLdb
 from werkzeug.utils import secure_filename
-import os
-import hashlib
+import cPickle as pickle
+import rsa
 
 LOC_OF_UPLOAD = '/home/musselman/Downloads'
 EXTEN = set(['txt'])

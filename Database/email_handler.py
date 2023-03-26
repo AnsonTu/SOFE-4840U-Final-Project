@@ -3,7 +3,7 @@ from email import encoders
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 import sys
-sys.path.insert(0, r'/home/musselman/Downloads/SecProj/Database')
+sys.path.insert(0, r'/home/musselman/Downloads/SOFE-4840U-Final-Project-main/Database')
 from email.mime.multipart import MIMEMultipart
 from Credentials import *
 
@@ -46,7 +46,7 @@ def send_email_super_orderdept(dest_addr):
     email_fields.attach(MIMEText(body, 'plain'))
  
     encrypt_file = "cust_PO.txt"
-    attch = open("/home/musselman/Downloads/SecProj/purchase_center/cust_PO.txt", "rb")
+    attch = open("/home/musselman/Downloads/SOFE-4840U-Final-Project-main/purchase_centre/cust_PO.txt", "rb")
  
     segment = MIMEBase('application', 'octet-stream')
     segment.set_payload((attch).read())
@@ -77,7 +77,7 @@ def send_email_to_orderdept(dest_addr):
     email_message.attach(MIMEText(email_cont, 'plain'))
  
     attch_name = "super_PO.txt"
-    attch = open("/home/musselman/Downloads/SecProj/Supervisor/super_PO.txt", "rb")
+    attch = open("/home/musselman/Downloads/SOFE-4840U-Final-Project-main/Supervisor/super_PO.txt", "rb")
  
     segment = MIMEBase('application', 'octet-stream')
     segment.set_payload((attch).read())

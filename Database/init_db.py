@@ -2,7 +2,7 @@ import MySQLdb
 import cPickle as pickle
 import sys
 import rsa
-sys.path.insert(0, r'/home/musselman/Downloads/Web-based-secure-purchase-order-master/Database')
+sys.path.insert(0, r'/home/musselman/Downloads/SOFE-4840U-Final-Project-main/Database')
 from Credentials import * 
 
 # Function to generate key pairs.
